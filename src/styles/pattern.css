@@ -1,4 +1,8 @@
 #main{
-  background-image:url("/public/bg.png");
-  background-repeat:
+  background-image:url("/public/ligth.png");
+}
+
+.bg-grade{
+  background-color: rgb(15 23 42);
+  background-image:url('/public/bg.png')
 }
