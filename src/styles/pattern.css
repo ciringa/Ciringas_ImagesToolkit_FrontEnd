@@ -6,3 +6,16 @@
   background-color: rgb(15 23 42);
   background-image:url('/public/bg.png')
 }
+
+#lg-1{
+  position:absolute;
+  top:300px;
+  left:-580px
+}
+
+
+#lg-2{
+  position:absolute;
+  top:-300;
+  right:-680px
+}
