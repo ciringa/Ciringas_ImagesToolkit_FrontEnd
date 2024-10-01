@@ -11,9 +11,10 @@ function App() {
   const [SiteState,SetSiteState] = useState<Test>(Test.remBg)
   
   return (
-    <div id="Main" className="bg-slate-800 bg-gradient-to-r from-slate-800 to-slate-900 flex w-full flex-col h-screen justify-center items-center gap-y-4">
-      <div id="header" className=" rounded-lg bg-slate-900 w-1/2 h-auto p-8 flex flex-col justify-center items-center gap-3 border-l-8 border-l-blue-600">
+    <div id="Main" className="bg-slate-800 bg-gradient-to-r from-slate-800 to-slate-900 flex w-full flex-col h-full justify-center items-center gap-y-4">
+      <div id="header" className="sm:w-2/3 sm:mt-7 rounded-lg w-1/2 h-auto p-8 flex flex-col justify-center items-center ">
         <img src="/LogoFull.png" alt="" />
+        <h1 className="text-white font-semibold text-2xl text-center">Nunca iremos exigir que você <a>Login</a> faça  para usar nossa aplicação<br/>Faça isso se desejar</h1>
         <div className=" flex flex-row h-44 w-full justify-center items-center gap-4">
           <button className="
                       cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg
@@ -33,8 +34,8 @@ function App() {
         </div>
       </div>
       
-      <div className="w-full mt-10 flex items-center justify-center">
-        {SiteState==Test.remBg?(<RemBgCard />): SiteState==Test.applyEffect?(<AppyEffect />):(<AppyEffect />)}
+      <div className="w-2/3 sm:w-full mt-5 flex items-center justify-center">
+        {SiteState==Test.remBg?(<RemBgCard />): SiteState==Test.applyEffect?(<AppyEffect />): SiteState==Test.Transform?(<AppyEffect />):(<></>)}
       </div>
     </div>
   )
