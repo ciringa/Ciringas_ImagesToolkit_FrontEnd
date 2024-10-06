@@ -15,6 +15,7 @@ function createWindow () {
     }
   })
   win.setMenu(null)
+  win.setIcon("public/Logo.png")
   win.loadURL('http://localhost:5173/')
 }
 

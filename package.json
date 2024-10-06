@@ -10,7 +10,7 @@
   },
   "description": "a frontend to a background remover aplication",
   "scripts": {
-    "build:electron":"electron-forge make",
+    "build:electron": "electron-forge make",
     "start": "electron-forge start",
     "style": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "dev": "vite",
@@ -21,10 +21,12 @@
     "make": "electron-forge make"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "electron-squirrel-startup": "^1.0.1",
     "lucide-react": "^0.446.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.5.0",

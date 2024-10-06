@@ -2,6 +2,11 @@ import { useState } from "react"
 import AppyEffect from "./components/ApplyEffect"
 import RemBgCard from "./components/RemoveBg"
 import "./styles/pattern.css"
+import ImageCard from "./components/ImageCard"
+import ImagesContainer from "./components/containers/ImagesContainers"
+import TransformCard from "./components/TransformCard"
+import Header from "./components/containers/Header"
+
 enum Test{
    remBg="remBg",
    applyEffect="applyEffect",
@@ -11,11 +16,15 @@ function App() {
   const [SiteState,SetSiteState] = useState<Test>(Test.remBg)
   
   return (
-    <div id="Main" className="bg-slate-800 bg-gradient-to-r from-slate-800 to-slate-900 flex w-full flex-col h-full justify-center items-center gap-y-4">
-      <div id="header" className="sm:w-2/3 sm:mt-7 rounded-lg w-1/2 h-auto p-8 flex flex-col justify-center items-center ">
-        <img src="/LogoFull.png" alt="" />
-        <h1 className="text-white font-semibold text-2xl text-center">Nunca iremos exigir que você <a>Login</a> faça  para usar nossa aplicação<br/>Faça isso se desejar</h1>
-        <div className=" flex flex-row h-44 w-full justify-center items-center gap-4">
+    <div id="Main" className=" bg-slate-800 bg-gradient-to-r from-slate-800 to-slate-900 flex w-full flex-col h-full justify-center items-center gap-y-4">
+      <Header></Header>
+
+        <div className="sm:w-2/3 sm:mt-7 rounded-lg w-1/2 h-auto p-8 flex flex-col justify-center items-center ">
+        <div className="w-full p-16  flex justify-center items-center flex-col enableBG">
+              <img src="/LogoFull.png" alt="" />
+              <h1 className="text-white font-semibold text-2xl text-center w-1/2">Uma aplicação fullstack que permite a manipulção precisa de Imagens usando as mais modernas tecnologias</h1>
+        </div>
+        <div className="  flex flex-row h-44 w-full justify-center items-center gap-4">
           <button className="
                       cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg
                       border-blue-600
@@ -35,8 +44,11 @@ function App() {
       </div>
       
       <div className="w-2/3 sm:w-full mt-5 flex items-center justify-center">
-        {SiteState==Test.remBg?(<RemBgCard />): SiteState==Test.applyEffect?(<AppyEffect />): SiteState==Test.Transform?(<AppyEffect />):(<></>)}
+        {SiteState==Test.remBg?(<RemBgCard />): SiteState==Test.applyEffect?(<AppyEffect />): SiteState==Test.Transform?(<TransformCard />):(<></>)}
       </div>
+      
+      <ImagesContainer></ImagesContainer>
+      <h1 className="text-white font-semibold text-2xl text-center">Nunca iremos exigir que você faça <a className="text-blue-500 cursor-pointer">Login</a> para usar nossa aplicação. </h1>
     </div>
   )
 }

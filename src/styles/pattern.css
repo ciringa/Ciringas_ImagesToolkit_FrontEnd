@@ -19,3 +19,11 @@
   top:-300;
   right:-680px
 }
+
+
+.enableBG{
+  background-image:url("/foreround.png");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:fit
+}
