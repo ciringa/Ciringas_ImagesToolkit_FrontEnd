@@ -7,9 +7,9 @@ export default function Header(){
             </div>
 
             <div className="w-1/2 flex flex-row itens-center justify-center gap-12">
-                <a href="https://github.com/ciringa" className="text-white bg-slate-950/20 p-3 rounded-sm text-center cursor-pointer font-medium text-2xl hover:bg-slate-950 decoration-blue-500"><strong className="text-red-600">▲ </strong>Github</a>
-                <a href="https://github.com/ciringa/Ciringas_Images_ToolKit" className="text-white bg-slate-950/20 p-3 rounded-sm text-center cursor-pointer font-medium text-2xl hover:bg-slate-950 decoration-blue-500"><strong className="text-blue-600">▲ </strong>Source</a>
-                <a className="text-white bg-slate-950/20 p-3 rounded-sm text-center cursor-pointer font-medium text-2xl hover:bg-slate-950 decoration-blue-500"><strong className="text-green-600">▲ </strong>Downloads</a>
+                <a href="https://github.com/ciringa" className="text-white bg-slate-950/20 p-3 rounded-lg text-center cursor-pointer font-medium text-2xl hover:bg-slate-950 decoration-blue-500"><strong className="text-red-600">▲ </strong>Github</a>
+                <a href="https://github.com/ciringa/Ciringas_Images_ToolKit" className="text-white bg-slate-950/20 p-3 rounded-lg text-center cursor-pointer font-medium text-2xl hover:bg-slate-950 decoration-blue-500"><strong className="text-blue-600">▲ </strong>Source</a>
+                <a className="text-white bg-slate-950/20 p-3 text-center cursor-pointer font-medium text-2xl rounded-lg hover:bg-slate-950 decoration-blue-500"><strong className="text-green-600">▲ </strong>Downloads</a>
             </div>
         </div>
     )

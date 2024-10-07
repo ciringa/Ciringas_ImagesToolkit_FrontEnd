@@ -554,20 +554,12 @@ video {
   display: none;
 }
 
-.absolute {
-  position: absolute;
-}
-
 .relative {
   position: relative;
 }
 
 .top-0 {
   top: 0px;
-}
-
-.z-0 {
-  z-index: 0;
 }
 
 .z-10 {
@@ -611,6 +603,14 @@ video {
   margin-top: 1.25rem;
 }
 
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mt-24 {
+  margin-top: 6rem;
+}
+
 .block {
   display: block;
 }
@@ -641,6 +641,10 @@ video {
 
 .h-52 {
   height: 13rem;
+}
+
+.h-64 {
+  height: 16rem;
 }
 
 .h-auto {

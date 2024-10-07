@@ -1,11 +1,11 @@
 import { useState } from "react"
 import AppyEffect from "./components/ApplyEffect"
 import RemBgCard from "./components/RemoveBg"
-import "./styles/pattern.css"
-import ImageCard from "./components/ImageCard"
+
 import ImagesContainer from "./components/containers/ImagesContainers"
 import TransformCard from "./components/TransformCard"
 import Header from "./components/containers/Header"
+import Footer from "./components/containers/Footer"
 
 enum Test{
    remBg="remBg",
@@ -48,9 +48,11 @@ function App() {
       </div>
       
       <ImagesContainer></ImagesContainer>
-      <h1 className="text-white font-semibold text-2xl text-center">Nunca iremos exigir que você faça <a className="text-blue-500 cursor-pointer">Login</a> para usar nossa aplicação. </h1>
+      <Footer></Footer>
+
     </div>
   )
+
 }
 
 export default App

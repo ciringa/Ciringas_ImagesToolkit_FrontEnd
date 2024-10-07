@@ -28,7 +28,10 @@ export default function AppyEffect(){
     return(
         <>
             <div className="relative sm:w-2/3 flex w-1/2 flex-col rounded-xl bg-slate-900 bg-clip-border text-gray-300 shadow-md">
-                <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600"></div>
+                <div className="flex items-center relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl text-white bg-gradient-to-b from-blue-600 to-blue-800">
+                    <img src="public/bg.png" alt="" />
+                    <img id="chickenImage" src="/chicken.png" alt="" />
+                </div>
                 <div className="p-6">
                     <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                         Aplicar Efeito
