@@ -1,4 +1,44 @@
+import { useEffect, useState } from "react";
+
 export default function AppyEffect(){
+    const [selectedOption, setSelectedOption] = useState<string>("1");
+    const [rangeValue, setRangeValue] = useState<string>("0");
+    const [rangeMin, setRangeMin] = useState<string>("0");
+    const [rangeMax, setRangeMax] = useState<string>("0");
+  
+    useEffect(() => {
+      // Atualiza o range com base na opção selecionada
+      switch (selectedOption) {
+        case "1":
+          setRangeMin("0");
+          setRangeMax("0");
+          setRangeValue("0");
+          break;
+        case "2":
+          setRangeMin("1");
+          setRangeMax("7");
+          setRangeValue("5");
+          break;
+        case "3":
+          setRangeMin("1");
+          setRangeMax("20");
+          setRangeValue("10");
+          break;
+        default:
+          break;
+      }
+    }, [selectedOption]);
+  
+    const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+      setSelectedOption(e.target.value);
+    };
+  
+    const handleRangeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setRangeValue(e.target.value);
+      console.log(e.target.value);
+    };
+
+    
     function applyEffect(){
         const url = 'http://127.0.0.1:4545/image/effect';
         const outUrl = document.getElementById('outPutPath2')
@@ -25,6 +65,9 @@ export default function AppyEffect(){
         applyEffect()
     })
 
+
+
+
     return(
         <>
             <div className="relative sm:w-2/3 flex w-1/2 flex-col rounded-xl bg-slate-900 bg-clip-border text-gray-300 shadow-md">
@@ -37,7 +80,7 @@ export default function AppyEffect(){
                         Aplicar Efeito
                     </h5>
                     <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-                    Adicione efeitos especiais para a sua imagem. 
+                        Adicione efeitos especiais para a sua imagem. 
                     </p>
                 </div>
                 <div className="p-6 pt-0">
@@ -48,7 +91,7 @@ export default function AppyEffect(){
                             <option className="rounded-none bg-blue-500" value="2">Blur</option>
                             <option className="rounded-none bg-blue-500" value="3">Canny</option>
                         </select>
-                        <input type="range" name="Amount" id="" />
+                        <input type="range" name="Amount" id="Range" />
                         <input type="submit" value="Processar Imagem" className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"/>
                     </form>
                 </div>
