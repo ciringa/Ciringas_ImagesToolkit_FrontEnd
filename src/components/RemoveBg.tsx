@@ -4,8 +4,7 @@ export default function RemBgCard(){
     return(
         <>
         <div className="relative sm:w-2/3 flex w-1/2 flex-col rounded-xl bg-slate-900 bg-clip-border text-gray-300 shadow-md">
-            <div className="flex items-center relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl text-white bg-gradient-to-b from-blue-600 to-blue-800">
-                <img id="ScissorImage" src="src/assets/scissor.png"></img>
+            <div className="flex items-center relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl text-white bg-gradient-to-b from-blue-600 to-blue-800 enableBG">
                 <img src="public/bg.png" alt="" />
             </div>
             <div className="p-6">

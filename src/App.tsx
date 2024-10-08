@@ -20,7 +20,7 @@ function App() {
       <Header></Header>
 
         <div className="sm:w-2/3 sm:mt-7 rounded-lg w-1/2 h-auto p-8 flex flex-col justify-center items-center ">
-        <div className="w-full p-16  flex justify-center items-center flex-col enableBG">
+        <div className="w-full  flex justify-center items-center flex-col">
               <img src="/LogoFull.png" alt="" />
               <h1 className="text-white font-semibold text-2xl text-center w-1/2">Uma aplicação fullstack que permite a manipulção precisa de Imagens usando as mais modernas tecnologias</h1>
         </div>

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ImageCard from "../ImageCard";
-import { API } from "../../lib/env";
 
 export default function ImagesContainer(){
 
