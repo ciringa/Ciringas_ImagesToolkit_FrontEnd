@@ -1,11 +1,14 @@
+
+import "../styles/img.css"
+
 export default function ImageCard(data:{Title:string,URL:string}){
     const {Title,URL} = data 
-    console.log(data)
+
     return(
         <>
             <div className="bg-slate-900 sm:w-52 sm:h-50 transform transition duration-300 hover:scale-110 rounded-lg shadow-lg h-52 w-52 text-white hover:shadow-xl">
                 <div className="bg-gradient-to-br from-rose-100 via-purple-200 to-purple-200 m-2 h-3/6 rounded-lg">
-                    <img src={URL} alt="" className=" w-full h-full" />
+                    <img alt="" className=" w-full h-full img-conf" />
                 </div>
 
                 <div className="px-5 pt-2 flex flex-col">
@@ -19,3 +22,4 @@ export default function ImageCard(data:{Title:string,URL:string}){
         </>
     )
 }
+
